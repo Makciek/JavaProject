@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane fitToHeight="true" fitToWidth="true" pannable="true" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaProjectFrontend.Controller">
+   <content>
+      <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT">
+         <children>
+            <HBox minHeight="-Infinity" minWidth="-Infinity" spacing="5.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox>
+                     <children>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                           <content>
+                              <Accordion fx:id="labsAccordian" />
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </VBox>
+                  <StackPane HBox.hgrow="ALWAYS">
+                     <children>
+                        <VBox spacing="5.0" HBox.hgrow="SOMETIMES">
+                           <children>
+                              <TabPane fx:id="codesTabPane" tabClosingPolicy="ALL_TABS" VBox.vgrow="ALWAYS" />
+                              <HBox fx:id="tabButtonsBox" alignment="BOTTOM_CENTER" spacing="5.0" visible="false" VBox.vgrow="SOMETIMES">
+                                 <children>
+                                    <Button fx:id="copyToClipboard" mnemonicParsing="false" text="Kopiuj" />
+                                    <Button fx:id="saveAsFile" mnemonicParsing="false" text="Zapisz" />
+                                    <Button fx:id="closeTab" mnemonicParsing="false" text="Zamknij" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <TextArea fx:id="helloArea" editable="false" prefHeight="200.0" prefWidth="200.0" text="Miło cię widzieć na zajęciach z programowania w języku Java!&#10;Dzięki tej aplikacji będziesz mógł w łatwy sposób przeglądać, kopiować i zapisywać kody z przykładów.&#10;Wybierz przykład z listy po lewej by zacząć.&#10;&#10;Auto: Maciej Kołodziej&#10;Użyte narzędzia: JavaFx, Spring Boot, Maven, richtextfx" wrapText="true" />
+                     </children>
+                  </StackPane>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </content>
+</ScrollPane>
